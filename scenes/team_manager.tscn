@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ejyelg0drrkc"]
+
+[ext_resource type="Script" path="res://scenes/team_manager.gd" id="1_npx2t"]
+
+[node name="TeamManager" type="Node2D"]
+script = ExtResource("1_npx2t")
+
+[node name="UnitContainer" type="Node2D" parent="."]
+
+[node name="RespawnTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="RespawnTimer" to="." method="_on_respawn_timer_timeout"]
